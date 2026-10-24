@@ -1,7 +1,9 @@
-// To add a project, add an object here. `category` must match a filter button in index.html.
+// To add a project, add an object here. `category` must match a filter button in index.html,
+// `color` is the background behind the screenshot.
 const PROJECTS = [
   {
     id: 'nm-north',
+    color: '#1f3a6e',
     title: 'NM North Construction',
     type: 'Client website',
     category: 'web',
@@ -22,6 +24,7 @@ const PROJECTS = [
   },
   {
     id: 'inventory',
+    color: '#232b3d',
     title: 'Inventory & Order Management',
     type: 'Full-stack app',
     category: 'fullstack',
@@ -43,6 +46,7 @@ const PROJECTS = [
   },
   {
     id: 'store',
+    color: '#5146c9',
     title: 'Online Store',
     type: 'React front end',
     category: 'web',
@@ -64,6 +68,7 @@ const PROJECTS = [
   },
   {
     id: 'finance',
+    color: '#2b4a5e',
     title: 'Finance Tracker',
     type: 'Web app',
     category: 'web',
@@ -85,6 +90,7 @@ const PROJECTS = [
   },
   {
     id: 'game-system',
+    color: '#3b2f5c',
     title: 'Server-Authoritative Game System',
     type: 'Multiplayer networking',
     category: 'games',
@@ -103,6 +109,7 @@ const PROJECTS = [
   },
   {
     id: 'energy-ball',
+    color: '#6e3128',
     title: 'Energy Ball',
     type: 'Roblox game',
     category: 'games',
@@ -122,6 +129,7 @@ const PROJECTS = [
   },
   {
     id: 'photo-fetcher',
+    color: '#2d5b4e',
     title: 'Photo Fetcher',
     type: 'API project',
     category: 'web',

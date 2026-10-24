@@ -24,7 +24,7 @@ function createStack(items) {
 
 function renderProjects() {
   grid.innerHTML = PROJECTS.map((project) => `
-    <button class="project" type="button" data-id="${project.id}" data-category="${project.category}">
+    <button class="project" type="button" data-id="${project.id}" data-category="${project.category}" data-reveal style="--tint: ${project.color}">
       <div class="project__image">
         <img src="${project.image}" alt="Screenshot of ${project.title}" loading="lazy">
       </div>
@@ -65,6 +65,7 @@ function openProject(id) {
   const project = PROJECTS.find((p) => p.id === id);
   if (!project) return;
 
+  modal.style.setProperty('--tint', project.color);
   modal.querySelector('.modal__image').src = project.image;
   modal.querySelector('.modal__image').alt = `Screenshot of ${project.title}`;
   modal.querySelector('.modal__meta').textContent = `${project.type} · ${project.year}`;
@@ -93,5 +94,22 @@ modal.addEventListener('click', (event) => {
 });
 
 
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('is-visible');
+    revealObserver.unobserve(entry.target);
+  });
+}, { rootMargin: '0px 0px -10% 0px' });
+
+
+// The strip scrolls by half its width, so it needs a second copy to loop without a gap.
+const marqueeTrack = document.querySelector('.marquee__track');
+marqueeTrack.innerHTML += marqueeTrack.innerHTML;
+[...marqueeTrack.children].slice(marqueeTrack.children.length / 2)
+  .forEach((item) => item.setAttribute('aria-hidden', 'true'));
+
+
 renderProjects();
+document.querySelectorAll('[data-reveal]').forEach((el) => revealObserver.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();

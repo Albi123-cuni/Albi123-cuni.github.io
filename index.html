@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eralb Çuni · Portfolio</title>
-  <meta name="description" content="Websites, web apps and games built by Eralb Çuni, a programming student.">
+  <meta name="description" content="Websites, web apps and games built by Eralb Çuni.">
   <meta property="og:title" content="Eralb Çuni · Portfolio">
   <meta property="og:description" content="Websites, web apps and games by Eralb Çuni.">
   <meta property="og:image" content="https://albi123-cuni.github.io/assets/img/projects/nm-north.jpg">
@@ -12,13 +12,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
 
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
 
   <script>
     // Set the theme before the page paints so it doesn't flash.
+    document.documentElement.classList.add('js');
     try {
       const theme = localStorage.getItem('theme');
       if (theme) document.documentElement.dataset.theme = theme;
@@ -29,7 +30,7 @@
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="#top" class="logo">Eralb Çuni</a>
+      <a href="#top" class="logo"><span class="logo__mark">E</span>Eralb Çuni</a>
 
       <nav class="nav" aria-label="Main">
         <a href="#work">Work</a>
@@ -43,31 +44,53 @@
 
   <main id="top">
 
-    <section class="hero container">
-      <div class="hero__text">
-        <p class="eyebrow">Developer · Computer Science applicant</p>
-        <h1 class="hero__title">I build websites, web apps and games.</h1>
-        <p class="hero__intro">
-          I'm Eralb, a programming student at Gjergj Canco Technical High School. Here's a selection of my
-          work, from a website for a construction company to a full-stack inventory system. Next year I want
-          to start a Computer Science degree in China.
-        </p>
-        <div class="hero__actions">
-          <a href="#work" class="btn btn--primary">See my work</a>
-          <a href="https://github.com/Albi123-cuni" class="btn btn--secondary" target="_blank" rel="noopener">GitHub ↗</a>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="status"><span class="status__dot"></span>Applying for Computer Science · 2027</p>
+          <h1 class="hero__title">I build <em>websites</em>, web apps and games.</h1>
+          <p class="hero__intro">
+            I'm Eralb, a developer with an EQF Level 4 qualification in Programming from Gjergj Canco
+            Technical High School. Here's a selection of my work, from a website for a construction company
+            to a full-stack inventory system.
+          </p>
+          <div class="hero__actions">
+            <a href="#work" class="btn btn--primary">See my work</a>
+            <a href="https://github.com/Albi123-cuni" class="btn btn--secondary" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="hero__screens" aria-hidden="true">
+          <div class="screen screen--back-left"><img src="assets/img/projects/finance-tracker.jpg" alt=""></div>
+          <div class="screen screen--back-right"><img src="assets/img/projects/online-store.jpg" alt=""></div>
+          <div class="screen screen--front"><img src="assets/img/projects/nm-north.jpg" alt=""></div>
         </div>
       </div>
 
-      <div class="hero__screens" aria-hidden="true">
-        <div class="screen screen--back-left"><img src="assets/img/projects/finance-tracker.jpg" alt=""></div>
-        <div class="screen screen--back-right"><img src="assets/img/projects/online-store.jpg" alt=""></div>
-        <div class="screen screen--front"><img src="assets/img/projects/nm-north.jpg" alt=""></div>
+      <div class="container">
+        <ul class="stats">
+          <li><b>7</b><span>projects built</span></li>
+          <li><b>1</b><span>client website</span></li>
+          <li><b>EQF 4</b><span>Programming qualification</span></li>
+          <li><b>9.32</b><span>final-year average</span></li>
+        </ul>
+      </div>
+
+      <div class="marquee" aria-label="Technologies I use">
+        <div class="marquee__track">
+          <span>React</span><span>Node.js</span><span>Express</span><span>SQLite</span><span>Python</span>
+          <span>C#</span><span>Java</span><span>JavaScript</span><span>Swift</span><span>Luau</span>
+          <span>Unreal Engine 5</span><span>Roblox Studio</span><span>Git</span><span>HTML &amp; CSS</span>
+        </div>
       </div>
     </section>
 
     <section id="work" class="section container">
-      <div class="section__head">
-        <h2 class="section__title">Selected work</h2>
+      <div class="section__head" data-reveal>
+        <div>
+          <p class="kicker">Portfolio</p>
+          <h2 class="section__title">Selected work</h2>
+        </div>
         <div class="filters" role="group" aria-label="Filter projects">
           <button type="button" class="filter is-active" data-filter="all">All</button>
           <button type="button" class="filter" data-filter="web">Web</button>
@@ -85,8 +108,9 @@
     </section>
 
     <section id="about" class="section container about">
-      <div class="about__text">
-        <h2 class="section__title">About</h2>
+      <div class="about__text" data-reveal>
+        <p class="kicker">About</p>
+        <h2 class="section__title">How I work</h2>
         <p class="about__lead">
           I care most about the part of a program you can't see: how the server keeps players in sync,
           where data gets checked, how the pieces talk to each other.
@@ -105,19 +129,19 @@
       </div>
 
       <div class="about__cards">
-        <article class="info-card">
+        <article class="info-card" data-reveal>
           <h3 class="info-card__title">Education</h3>
           <p class="info-card__main">Gjergj Canco Technical High School</p>
-          <p class="info-card__sub">Programming, Level IV (EQF IV) · 2023 – 2027</p>
+          <p class="info-card__sub">Programming · EQF Level 4 qualification · 2023 – 2026</p>
           <ul class="grades" aria-label="Yearly average out of 10">
-            <li style="--score: 8.38"><span>Year 1</span><i></i><b>8.38</b></li>
-            <li style="--score: 8.89"><span>Year 2</span><i></i><b>8.89</b></li>
-            <li style="--score: 9.32"><span>Year 3</span><i></i><b>9.32</b></li>
+            <li style="--score: 8.38"><span>Grade 10</span><i></i><b>8.38</b></li>
+            <li style="--score: 8.89"><span>Grade 11</span><i></i><b>8.89</b></li>
+            <li style="--score: 9.32"><span>Grade 12</span><i></i><b>9.32</b></li>
           </ul>
           <p class="info-card__sub">Overall average 8.85 / 10</p>
         </article>
 
-        <article class="info-card">
+        <article class="info-card" data-reveal>
           <h3 class="info-card__title">Toolkit</h3>
           <dl class="toolkit">
             <dt>Languages</dt><dd>Python, C#, Java, JavaScript, Swift, Luau</dd>
@@ -127,9 +151,10 @@
           </dl>
         </article>
 
-        <article class="info-card">
+        <article class="info-card" data-reveal>
           <h3 class="info-card__title">Recognition</h3>
           <ul class="awards">
+            <li><span>2026</span>EQF Level 4 qualification in Programming</li>
             <li><span>Oct 2025</span>Game Jam Tirana 3.0, participant</li>
             <li><span>Jul 2025</span>Professional Level II Certificate in ICT</li>
           </ul>
@@ -138,13 +163,14 @@
       </div>
     </section>
 
-    <section id="contact" class="section container contact">
-      <h2 class="section__title">Contact</h2>
-      <p class="contact__text">Want to know more about a project, or just say hello?</p>
-      <a class="contact__email" href="mailto:eralbcuni1@gmail.com">eralbcuni1@gmail.com</a>
-      <p class="contact__other">
-        Code on <a href="https://github.com/Albi123-cuni" target="_blank" rel="noopener">GitHub</a>
-      </p>
+    <section id="contact" class="section container">
+      <div class="contact" data-reveal>
+        <p class="kicker kicker--light">Contact</p>
+        <h2 class="contact__title">Let's build something.</h2>
+        <p class="contact__text">Questions about a project, or want to see more? Email is the fastest way to reach me.</p>
+        <a class="contact__email" href="mailto:eralbcuni1@gmail.com">eralbcuni1@gmail.com</a>
+        <a class="contact__github" href="https://github.com/Albi123-cuni" target="_blank" rel="noopener">github.com/Albi123-cuni ↗</a>
+      </div>
     </section>
   </main>
 
@@ -155,7 +181,9 @@
 
   <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
     <button class="modal__close" type="button" aria-label="Close">×</button>
-    <img class="modal__image" alt="">
+    <div class="modal__media">
+      <img class="modal__image" alt="">
+    </div>
     <div class="modal__body">
       <p class="modal__meta"></p>
       <h3 class="modal__title" id="modal-title"></h3>

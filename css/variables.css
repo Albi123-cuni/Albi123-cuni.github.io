@@ -9,14 +9,17 @@
   --accent: #a8382b;
   --accent-hover: #8e2c21;
   --accent-soft: #f0d9d3;
-  --shadow: 0 1px 2px rgb(31 30 28 / 0.06), 0 12px 32px -12px rgb(31 30 28 / 0.18);
+  --shadow: 0 1px 2px rgb(31 30 28 / 0.04), 0 8px 24px -12px rgb(31 30 28 / 0.12);
+  --shadow-lg: 0 2px 4px rgb(31 30 28 / 0.06), 0 30px 60px -20px rgb(31 30 28 / 0.35);
+  --glow-1: rgb(168 56 43 / 0.14);
+  --glow-2: rgb(81 70 201 / 0.10);
+  --dots: rgb(31 30 28 / 0.09);
 
   --font-serif: "Source Serif 4", Georgia, serif;
   --font-sans: "IBM Plex Sans", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", Consolas, monospace;
 
   --container: 1160px;
-  --radius: 12px;
 }
 
 /* Dark theme: follows the system unless the visitor picked light. */
@@ -33,6 +36,10 @@
     --accent-hover: #ea8576;
     --accent-soft: #4a2a25;
     --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px -16px rgb(0 0 0 / 0.6);
+    --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.3), 0 30px 60px -20px rgb(0 0 0 / 0.75);
+    --glow-1: rgb(224 112 95 / 0.16);
+    --glow-2: rgb(110 100 230 / 0.12);
+    --dots: rgb(255 255 255 / 0.06);
   }
 }
 
@@ -48,4 +55,8 @@
   --accent-hover: #ea8576;
   --accent-soft: #4a2a25;
   --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px -16px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.3), 0 30px 60px -20px rgb(0 0 0 / 0.75);
+  --glow-1: rgb(224 112 95 / 0.16);
+  --glow-2: rgb(110 100 230 / 0.12);
+  --dots: rgb(255 255 255 / 0.06);
 }
