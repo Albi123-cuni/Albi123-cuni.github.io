@@ -11,14 +11,15 @@ const PROJECTS = [
     image: 'assets/img/projects/nm-north.jpg',
     summary: 'A multi-page website for a construction and renovation company.',
     description:
-      'I designed and built the company website from scratch: a home page, a list of services, a gallery of finished projects and a contact page. It was hosted on GitHub Pages under the company\'s own domain.',
+      'I designed and built the company website from scratch: a home page, a list of services, a gallery of finished projects and a contact page. It ran on the company\'s own domain until the client decided not to renew it, so the same site now lives on GitHub Pages.',
     highlights: [
       'Four pages: home, services, project gallery and contact',
-      'Custom domain connected through GitHub Pages',
+      'Ran on the company\'s custom domain, hosted through GitHub Pages',
       'Meta description and Google Search Console verification so it shows up in search',
     ],
     stack: ['HTML', 'CSS', 'GitHub Pages'],
     links: [
+      { label: 'View the site', url: 'https://albi123-cuni.github.io/NMNorthConstructionLTD/' },
       { label: 'Source code', url: 'https://github.com/Albi123-cuni/NMNorthConstructionLTD' },
     ],
   },
