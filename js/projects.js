@@ -32,7 +32,7 @@ const PROJECTS = [
     image: 'assets/img/projects/inventory-system.svg',
     summary: 'Stock, orders and payments with separate admin, staff and client access.',
     description:
-      'A complete system for running a shop\'s stock and orders. Admins and staff manage products, suppliers, clients and orders from a dashboard. Clients log in to their own portal, pay pending orders and see their invoices.',
+      'A complete system for running a shop\'s stock and orders. Admins and staff manage products, suppliers, clients and orders from a dashboard. Clients log in to their own portal, pay pending orders through a demo payment flow and see their invoices.',
     highlights: [
       'JWT login with three roles (admin, staff, client); passwords hashed with bcrypt',
       'Normalised SQLite schema: 8 tables with foreign keys and cascade deletes',
@@ -96,11 +96,11 @@ const PROJECTS = [
     category: 'games',
     year: '2024 – 2025',
     image: 'assets/img/projects/game-system.svg',
-    summary: 'Multiplayer architecture where the server checks every action.',
+    summary: 'Multiplayer architecture where the server validates what clients send.',
     description:
       'A multiplayer networking architecture built around real-time physics and latency. The server owns the game state and validates the data clients send, which keeps client–server communication secure. Built in Roblox Studio; I have also explored Unreal Engine 5.',
     highlights: [
-      'Server-side validation of everything clients send',
+      'Server-side validation of the data clients send',
       'Real-time physics simulation shared between players',
       'Designed with network latency in mind',
     ],
