@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="Consolas, 'IBM Plex Mono', monospace">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#e0705f"/>
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#8a93a8"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="750" fill="#1c212c"/>
+  <text x="70" y="80" font-size="16" fill="#6f788b">server-authoritative model</text>
+
+  <g font-size="20" fill="#f3efe7">
+    <rect x="70" y="170" width="250" height="130" rx="12" fill="#252b38" stroke="#3a4253"/>
+    <text x="100" y="225">Client A</text>
+    <text x="100" y="262" font-size="15" fill="#8a93a8">sends input only</text>
+
+    <rect x="70" y="450" width="250" height="130" rx="12" fill="#252b38" stroke="#3a4253"/>
+    <text x="100" y="505">Client B</text>
+    <text x="100" y="542" font-size="15" fill="#8a93a8">sends input only</text>
+  </g>
+
+  <g fill="none" stroke-width="2.5">
+    <path d="M320 215C430 215 440 260 548 270" stroke="#e0705f" marker-end="url(#arrow)"/>
+    <path d="M320 535C430 535 440 480 548 470" stroke="#e0705f" marker-end="url(#arrow)"/>
+    <path d="M548 320C440 320 430 270 324 262" stroke="#8a93a8" stroke-dasharray="7 7" marker-end="url(#arrow-muted)"/>
+    <path d="M548 420C440 420 430 490 324 492" stroke="#8a93a8" stroke-dasharray="7 7" marker-end="url(#arrow-muted)"/>
+  </g>
+  <g font-size="14" fill="#8a93a8">
+    <text x="398" y="208">input</text>
+    <text x="398" y="560">input</text>
+    <text x="402" y="315">state</text>
+    <text x="402" y="440">state</text>
+  </g>
+
+  <rect x="560" y="140" width="570" height="470" rx="16" fill="#252b38" stroke="#e0705f" stroke-width="2"/>
+  <text x="600" y="198" font-size="24" fill="#f3efe7">Server</text>
+  <text x="600" y="228" font-size="15" fill="#8a93a8">owns the game state</text>
+
+  <g font-size="18" fill="#f3efe7">
+    <rect x="600" y="260" width="490" height="62" rx="10" fill="#1c212c" stroke="#3a4253"/>
+    <text x="625" y="298"><tspan fill="#e0705f">1</tspan>  receive input</text>
+    <rect x="600" y="338" width="490" height="62" rx="10" fill="#1c212c" stroke="#3a4253"/>
+    <text x="625" y="376"><tspan fill="#e0705f">2</tspan>  validate · reject invalid moves</text>
+    <rect x="600" y="416" width="490" height="62" rx="10" fill="#1c212c" stroke="#3a4253"/>
+    <text x="625" y="454"><tspan fill="#e0705f">3</tspan>  simulate physics</text>
+    <rect x="600" y="494" width="490" height="62" rx="10" fill="#1c212c" stroke="#3a4253"/>
+    <text x="625" y="532"><tspan fill="#e0705f">4</tspan>  broadcast state to clients</text>
+  </g>
+</svg>

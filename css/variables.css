@@ -1,0 +1,51 @@
+:root {
+  --bg: #f7f5f0;
+  --bg-soft: #efece4;
+  --surface: #fffdf9;
+  --text: #1f1e1c;
+  --text-soft: #57544d;
+  --text-faint: #8a867c;
+  --line: #dedad0;
+  --accent: #a8382b;
+  --accent-hover: #8e2c21;
+  --accent-soft: #f0d9d3;
+  --shadow: 0 1px 2px rgb(31 30 28 / 0.06), 0 12px 32px -12px rgb(31 30 28 / 0.18);
+
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
+
+  --container: 1160px;
+  --radius: 12px;
+}
+
+/* Dark theme: follows the system unless the visitor picked light. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151413;
+    --bg-soft: #1e1d1b;
+    --surface: #1c1b19;
+    --text: #ebe8e1;
+    --text-soft: #b3aea4;
+    --text-faint: #7d7970;
+    --line: #2e2c29;
+    --accent: #e0705f;
+    --accent-hover: #ea8576;
+    --accent-soft: #4a2a25;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px -16px rgb(0 0 0 / 0.6);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #151413;
+  --bg-soft: #1e1d1b;
+  --surface: #1c1b19;
+  --text: #ebe8e1;
+  --text-soft: #b3aea4;
+  --text-faint: #7d7970;
+  --line: #2e2c29;
+  --accent: #e0705f;
+  --accent-hover: #ea8576;
+  --accent-soft: #4a2a25;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px -16px rgb(0 0 0 / 0.6);
+}
