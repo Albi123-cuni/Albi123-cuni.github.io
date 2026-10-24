@@ -98,13 +98,13 @@ const PROJECTS = [
     image: 'assets/img/projects/game-system.svg',
     summary: 'Multiplayer architecture where the server checks every action.',
     description:
-      'A multiplayer networking architecture built around real-time physics and latency. The server owns the game state and validates the data clients send, which keeps client–server communication secure.',
+      'A multiplayer networking architecture built around real-time physics and latency. The server owns the game state and validates the data clients send, which keeps client–server communication secure. Built in Roblox Studio; I have also explored Unreal Engine 5.',
     highlights: [
       'Server-side validation of everything clients send',
       'Real-time physics simulation shared between players',
       'Designed with network latency in mind',
     ],
-    stack: ['Unreal Engine 5', 'C#', 'Luau'],
+    stack: ['Roblox Studio', 'Luau'],
     links: [],
   },
   {
